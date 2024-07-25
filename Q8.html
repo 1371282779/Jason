@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+
+		<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	
+	 <meta charset="UTF-8">
+	
+	<style>
+		* {
+  box-sizing: border-box;
+}
+		.header{
+		background-color: aqua;
+		color:#ffffff;
+		padding:15px;
+			width:100%;
+	}
+		body{
+			background-color: beige;
+			height: 100%;
+		}
+		.menu ul{
+			list-style-type: none;
+			margin: 5px;
+			padding: 0;
+			
+			
+		}
+		.menu li{
+			background-color: lawngreen;
+			color: beige;
+			padding: 8px;
+  margin-bottom: 7px;
+			box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+		}
+		.nav-link{ /* 改变hyperlink的样式*/
+			text-decoration: none;
+			color:black;
+		}
+		.menu li:hover{
+		background-color: #0099cc;
+	}
+		
+		[class*="col-"] {
+  float: left;
+  
+			width: 100%;
+}
+		/* main-content */
+		.main-content{
+			background-color: aqua
+		}
+		section{
+			display:none;	
+		}
+		section:target {
+    display: block !important;
+		}
+		input,select{
+			background-color:beige;
+		}
+		
+		.statement{
+			background-color: orangered;
+			color: aliceblue;
+			margin-top: 100px;
+		}
+		
+		
+		
+		@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;} /* 设置所有类名包含 col-s- 的元素在平板设备上的宽度百分比 */
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;} /* 设置所有类名包含 col- 的元素在桌面设备上的宽度百分比 */
+}
+		
+	
+		
+	.main-content::after{
+			content: "";
+  clear: both;
+  display: table;
+		}
+
+		
+	</style>
+	<title>Adopt A-Cat/Dog</title>
+</head>
+			<body>
+				<!-- header的开始-->
+				<div class="header">
+		<h1>
+			Adopt A-cat/Dog
+		</h1>
+		<a href = "#home" id="logo-link">
+		<img src = "/Users/jason/Desktop/cat_logo.png"
+							 width = "100"
+							 height = "80"
+			 alt="Cat logo"
+			 
+							 >
+					</a>
+		</div>
+				
+				<div class="sidebar">
+					<div class="col-6 col-s-6 menu">
+						<ul>
+							<li><a href="#home" class="nav-link">Home Page</a></li>
+							
+							<li><a href="#browse" class="nav-link">Browse Available Pets</a></li>
+							
+							<li><a href="#find" class="nav-link">Find a Dog/Cat</a></li>
+							
+							<li><a href="#dog" class="nav-link">Dog Care</a></li>
+							
+							<li><a href="#cat" class="nav-link">Cat Care</a></li>
+							
+							<li><a href="#have" class="nav-link">Have a pet ot give away</a></li>
+							
+							<li><a href="#contact" class="nav-link">Contact Us</a></li>
+							
+						</ul>
+					</div>
+				</div>
+				
+				<div class="main-content">
+					<div class="col-6 col-s-8">
+					<section id="home">
+            <h2>Welcome to Adopt A-Cat/Dog</h2>
+            <p>Find your perfect furry companion! We help connect loving homes with cats and dogs in need of adoption.</p>
+					</section>
+					
+					 <section id="browse">
+            <h2>Browse Available Pets</h2>
+            <p>Under Construction: This page will soon display all pets available for adoption.</p>
+        </section>
+				
+					 <section id="find">
+            <h2>Find a Dog/Cat</h2>
+            <form>
+                <label>
+                    Cat or dog:
+                    <select name="pet-type" required>
+						<option value="" disabled selected>Select an option</option>
+                        <option value="cat">Cat</option>
+                        <option value="dog">Dog</option>
+                    </select>
+                </label>
+                <br>
+				<br>
+                <label>
+                    Breed:
+                    <input type="text" name="breed" required>
+                </label>
+                <br>
+				<br>
+                <label>
+                    Preferred age:
+                    <select name="age" required>
+						<option value="" disabled selected>Select an option</option>
+                        <option value="puppy-kitten">Puppy/Kitten</option>
+                        <option value="young">Young</option>
+                        <option value="adult">Adult</option>
+                        <option value="senior">Senior</option>
+                        <option value="any">Doesn't matter</option>
+                    </select>
+                </label>
+                <br>
+				<br>
+                <label>
+                    Preferred gender:
+                    <select name="gender" required>
+						<option value="" disabled selected>Select an option</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="any">Doesn't matter</option>
+                    </select>
+                </label>
+                <br>
+				<br>
+                <label>
+                    <input type="checkbox" name="good-with-dogs"> Gets along with other dogs
+                </label>
+                <br>
+				<br>
+                <label>
+                    <input type="checkbox" name="good-with-cats"> Gets along with other cats
+                </label>
+                <br>
+				<br>
+                <label>
+                    <input type="checkbox" name="good-with-children"> Good with small children
+                </label>
+                <br>
+				<br>
+                <input type="submit" value="Submit">
+				<br>
+				<br>
+                <input type="reset" value="Clear">
+            </form>
+        </section>
+					
+					 <!-- 宠物护理页面 -->
+        <section id="dog">
+            <h2>Dog Care</h2>
+            
+				<ol type="1">
+					<li>High-Quality Food: Provide a balanced diet with high-quality dog food that meets your dog’s age, size, and health needs.</li>
+					<li>Regular Feeding Schedule: Feed your dog at the same times each day, typically twice daily.</li>
+					<li>Daily Exercise: Dogs need regular physical activity; take them for walks, play fetch, or let them run in a safe area.</li>
+				</ol>
+        </section>
+
+        <section id="cat">
+            <h2>Cat Care</h2>
+            
+				<ol type="1">
+					<li>	High-Quality Food: Provide balanced cat food suitable for your cat’s age, size, and health conditions.</li>
+					<li>Regular Feeding Schedule: Feed your cat at the same times each day, usually once or twice daily.</li>
+					<li>Scratching Posts: Provide scratching posts to keep their claws healthy and prevent destructive scratching.</li>
+				</ol>
+        </section>
+
+        <!-- 提供宠物领养表单 -->
+         <section id="have">
+            <h2>Have a Pet to Give Away</h2>
+            <form>
+                <label>
+                    Cat or dog:
+                    <select name="pet-type" required>
+						<option value="" disabled selected>Select an option</option>
+                        <option value="cat">Cat</option>
+                        <option value="dog">Dog</option>
+                    </select>
+                </label>
+                <br>
+				<br>
+                <label>
+                    Breed (include mix if applicable):
+                    <input type="text" name="breed" required>
+                </label>
+                <br>
+				<br>
+                <label>
+                    Age:
+                    <select name="age" required>
+						<option value="" disabled selected>Select an option</option>
+                        <option value="puppy-kitten">Puppy/Kitten (0-1 year)</option>
+                        <option value="young">Young (1-3 years)</option>
+                        <option value="adult">Adult (3-8 years)</option>
+                        <option value="senior">Senior (8+ years)</option>
+                    </select>
+                </label>
+                <br>
+				<br>
+                <label>
+                    Gender:
+                    <select name="gender" required>
+						<option value="" disabled selected>Select an option</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </label>
+                <br>
+				<br>
+                <label>
+                    <input type="checkbox" name="good-with-dogs"> Gets along with other dogs
+                </label>
+                <br>
+				<br>
+                <label>
+                    <input type="checkbox" name="good-with-cats"> Gets along with other cats
+                </label>
+                <br>
+				<br>
+                <label>
+                    <input type="checkbox" name="good-with-children"> Suitable for a family with small children
+                </label>
+                <br>
+				<br>
+                <label>
+                    Tell us about your pet:
+                    <textarea name="pet-description" rows="4" required></textarea>
+                </label>
+                <br>
+				<br>
+                <label>
+                    Your name:
+                    <input type="text" name="owner-name" required>
+                </label>
+                <br>
+				<br>
+                <label>
+                    Your email:
+                    <input type="email" name="owner-email" required>
+                </label>
+                <br>
+				<br>
+                <input type="submit" value="Submit">
+				<br>
+				<br>
+                <input type="reset" value="Clear">
+            </form>
+        </section>
+			
+
+        <!-- 联系我们页面 -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+			
+            <p>For any inquiries, please contact us at: 
+				name:Zihao Guo
+				student id:40232418
+				email:gu_zihao@concordia.ca</p>
+			
+        </section>
+			
+						
+						
+					</div>
+			</div>
+			<div class="statement">
+				<p>
+      We promise to protect your privacy and will not sell or misuse your information. We are not responsible for any incorrect information posted by users. 
+			<a href="#privacy">Privacy/Disclaimer Statement</a>
+			
+			</p>
+				<section id="privacy">
+					<h2>Privacy/Disclaimer Statement</h2>
+    <p>Adopt A-Cat/Dog is committed to protecting your privacy and ensuring the security of your personal information. We do not sell, trade, or otherwise transfer your personally identifiable information to outside parties.</p>
+    <p>While we strive to provide accurate and up-to-date information about pets available for adoption, we cannot guarantee the accuracy of information posted by pet owners. Adopt A-Cat/Dog is not responsible for any incorrect or inaccurate information provided by pet owners.</p>
+    <p>By using this website, you acknowledge and agree that Adopt A-Cat/Dog is not liable for any damages or losses resulting from the use of this website or the adoption of any pets listed on this site.</p>
+				</section>
+				
+			</div>
+				
+					
+			</body>
+</html>
